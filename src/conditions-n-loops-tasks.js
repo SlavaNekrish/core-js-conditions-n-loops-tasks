@@ -237,9 +237,8 @@ function getIndexOf(str, letter) {
  */
 function isContainNumber(num, digit) {
   let incomeNum = num;
-  const divider = 10;
-  while (incomeNum > 0.5) {
-    if (incomeNum % divider === digit) {
+  while (incomeNum > 0) {
+    if (incomeNum % 10 === digit) {
       return true;
     }
     incomeNum = (incomeNum / 10).toFixed();
